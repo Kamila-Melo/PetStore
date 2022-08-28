@@ -1,0 +1,650 @@
+*{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.wrapper{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  background-color: #FFF;
+  width: 100%;
+  height: 115px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+header .container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .search{
+  position: relative;
+}
+
+header .container .search input{
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #7f7f7f;
+  width: 197px;
+  height: 50px;
+  padding: 15px 10px;
+  outline: none;
+  color: #7f7f7f;
+}
+
+header .container .search img{
+  width: 24px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+nav{
+  background-color: #8157c5;
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  top: 115px;
+  z-index: 100;
+}
+
+nav .menu{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav .menu li{
+  text-align: center;
+}
+
+nav .menu li a{
+  text-decoration: none;
+  color: #FFF;
+  font-size: 14px;
+}
+
+main{
+  width: 100%;
+  margin-top: 170px;
+}
+
+main .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+main .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+main .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .swiper .swiper-navigation{
+  position: absolute;
+  top: 50%;
+  right: 19%;
+}
+
+main .swiper .swiper-navigation .swiper-button-next,
+main .swiper .swiper-navigation .swiper-button-prev{
+  color: #7f7f7f;
+}
+
+main .swiper .swiper-navigation .swiper-button-next:hover,
+main .swiper .swiper-navigation .swiper-button-prev:hover{
+  color: #007AFF;
+}
+
+main .buttons{
+  background-color: #ffa200;
+  width: 100%;
+  height: 135px;
+}
+
+main .buttons div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .buttons div img{
+  width: 340px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+main .buttons div img:hover{
+  scale: 1.1;
+}
+
+main .news,
+main .highlights{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 35px;
+}
+
+main .news h1,
+main .highlights h1{
+  color: #7f7f7f;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+main .news .products,
+main .highlights .products{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+main .news .products .product,
+main .highlights .products .product{
+  position: relative;
+  margin: 0 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+main .news .products .product:hover .filter,
+main .highlights .products .product:hover .filter{
+  display: flex;
+}
+
+main .news .products .product .filter,
+main .highlights .products .product .filter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+main .news .products .product .filter div,
+main .highlights .products .product .filter div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #8158c5;
+  opacity: 0.3;
+  z-index: 50;
+}
+
+main .news .products .product .filter button,
+main .highlights .products .product .filter button{
+  background-color: #ffa200;
+  padding: 20px;
+  font-size: 12px;
+  color: #FFF;
+  z-index: 60;
+  cursor: pointer;
+}
+
+main .news .products .product img,
+main .highlights .products .product img{
+  width: 190px;
+  height: auto;
+}
+
+main .news .products .product .price,
+main .highlights .products .product .price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .news .products .product .price .price-compare,
+main .highlights .products .product .price .price-compare{
+  font-size: 12px;
+  font-weight: 300;
+  color: #7f7f7f;
+  text-decoration:line-through;
+  margin-right: 10px;
+}
+
+main .news .products .product .title,
+main .news .products .product .price .item-price,
+main .highlights .products .product .title,
+main .highlights .products .product .price .item-price{
+  font-size: 14px;
+  font-weight: 600;
+  color: #7f7f7f;
+}
+
+main .news .products .product .max-installments,
+main .highlights .products .product .max-installments{
+  font-size: 12px;
+  font-weight: 300;
+  color: #7f7f7f;
+}
+
+main .choice{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 105px;
+}
+
+main .choice img{
+  width: 500px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+main .choice img:hover{
+  scale: 1.06;
+}
+
+.fixed-buttons{
+  position: fixed;
+  bottom: 230px;
+  right: 445px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer{
+  width: 100%;
+  margin-top: 120px;
+}
+
+footer .footer-newsletter{
+  background-color: #8158c5;
+  padding-bottom: 60px;
+}
+
+footer .footer-newsletter .infos{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 2px solid #ffa200;
+}
+
+footer .footer-newsletter .infos .delivery,
+footer .footer-newsletter .infos .installment,
+footer .footer-newsletter .infos .discount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+footer .footer-newsletter .infos .delivery img,
+footer .footer-newsletter .infos .installment img,
+footer .footer-newsletter .infos .discount img{
+  margin-right: 15px;
+}
+
+footer .footer-newsletter .infos .delivery > p,
+footer .footer-newsletter .infos .installment > p,
+footer .footer-newsletter .infos .discount > p{
+  font-size: 12px;
+  font-weight: 300;
+  color: #FFF;
+}
+
+footer .footer-newsletter .newsletter{
+  margin-top: 55px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-newsletter .newsletter > h1{
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFF;
+  margin-bottom: 25px;
+}
+
+footer .footer-newsletter .newsletter > p{
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFF;
+}
+
+footer .footer-newsletter .newsletter .fields{
+  width: 100%;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-newsletter .newsletter .fields input{
+  background-color: transparent;
+  border-bottom: 1px solid #FFF;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+  margin: 0 25px;
+  outline: none;
+}
+
+footer .footer-newsletter .newsletter .fields input::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+}
+
+footer .footer-newsletter .newsletter .fields button{
+  width: 80px;
+  height: 35px;
+  background-color: #ffa200;
+  color: #FFF;
+  cursor: pointer;
+}
+
+footer .footer-brands{
+  width: 100%;
+  padding: 40px 0 20px 0;
+}
+
+footer .footer-brands .pet-store{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+footer .footer-brands .pet-store .logos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-brands .pet-store .logos > img{
+  width: 208px;
+  margin-bottom: 25px;
+}
+
+footer .footer-brands .pet-store .logos > p{
+  font-size: 10px;
+  font-weight: 300;
+  width: 180px;
+  text-align: center;
+}
+
+footer .footer-brands .pet-store .logos .social-media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer .footer-brands .pet-store .logos .social-media .facebook,
+footer .footer-brands .pet-store .logos .social-media .instagram,
+footer .footer-brands .pet-store .logos .social-media .twitter{
+  background-color: #7f7f7f;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+footer .footer-brands .pet-store .store,
+footer .footer-brands .pet-store .contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-brands .pet-store .payment{
+  width: 195px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-brands .pet-store .store h1,
+footer .footer-brands .pet-store .contact h1,
+footer .footer-brands .pet-store .payment h1{
+  font-size: 12px;
+  font-weight: 600;
+  color: #8158c5;
+}
+
+footer .footer-brands .pet-store .payment h1{
+  margin-bottom: 10px;
+}
+
+footer .footer-brands .pet-store .store ul,
+footer .footer-brands .pet-store .contact ul,
+footer .footer-brands .pet-store .payment ul{
+  list-style: none;
+}
+
+footer .footer-brands .pet-store .store ul li,
+footer .footer-brands .pet-store .contact ul li,
+footer .footer-brands .pet-store .payment ul li{
+  margin-top: 10px;
+}
+
+footer .footer-brands .pet-store .store ul li a,
+footer .footer-brands .pet-store .contact ul li a,
+footer .footer-brands .pet-store .payment ul li a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+footer .footer-brands .pet-store .store ul li a{
+  color: #8158c5;
+}
+
+footer .footer-brands .dev{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+footer .footer-brands .dev > p{
+  font-size: 10px;
+  color: #7f7f7f;
+  margin-right: 45px;
+}
+
+@media (max-width: 1024px){
+  header .container{
+    justify-content: space-around;
+  }
+
+  nav .menu{
+    justify-content: space-around;
+  }
+
+  main .swiper .swiper-navigation{
+    right: 0;
+  }
+
+  main .buttons div{
+    justify-content: space-around;
+  }
+
+  main .buttons div img{
+    width: 285px;
+  }
+
+  main .news .products .product,
+  main .highlights .products .product{
+    margin: 0 25px;
+  }
+
+  main .choice img{
+    width: 460px;
+  }
+
+  footer .footer-brands .pet-store{
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px){
+  nav .menu li a{
+    font-size: 12px;
+  }
+
+  main .buttons div img{
+    width: 220px;
+  }
+
+  main .news .products .product,
+  main .highlights .products .product{
+    margin: 0 35px;
+  }
+
+  main .choice img{
+    width: 345px;
+  }
+
+  footer .footer-newsletter .infos .delivery > p,
+  footer .footer-newsletter .infos .installment > p, footer .footer-newsletter .infos .discount > p{
+    font-size: 10px;
+  }
+
+  footer .footer-brands .pet-store .payment{
+    width: 95px;
+  }
+}
+
+@media (max-width: 520px){
+  header .container .search input{
+    width: 135px;
+  }
+
+  header .container .logo img{
+    width: 135px;
+  }
+
+  nav .menu li a{
+    font-size: 9px;
+  }
+
+  main .buttons{
+    height: 190px;
+  }
+
+  main .buttons div{
+    flex-direction: column;
+  }
+
+  main .buttons div img{
+    width: 145px;
+  }
+
+  main .news .products .product,
+  main .highlights .products .product{
+    margin: 0 25px;
+  }
+
+  main .choice{
+    flex-direction: column;
+  }
+
+  main .choice img{
+    width: 225px;
+  }
+
+  footer .footer-newsletter .infos .delivery > p,
+  footer .footer-newsletter .infos .installment > p, footer .footer-newsletter .infos .discount > p{
+    width: 100px;
+    font-size: 8px;
+  }
+
+  footer .footer-newsletter .newsletter .fields{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+  }
+
+  footer .footer-newsletter .newsletter .fields input{
+    margin: 0 5px;
+  }
+
+  footer .footer-brands .pet-store{
+    flex-wrap: wrap;
+    height: 350px;
+  }
+
+}
